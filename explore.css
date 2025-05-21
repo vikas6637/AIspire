@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #6a80f0, #8b4fd7);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1.3em;
+  margin-top: 10px;
+  color: #e0dede;
+}
+
+.explore-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: white;
+  color: #5b3cc4;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
