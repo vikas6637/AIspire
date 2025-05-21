@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details Form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(
+          135deg,
+          #1a1a1a,
+          #2c2c2c
+        ); /* Light black gradient */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        margin-bottom: 25px;
+        color: #333;
+        font-size: 28px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border: none;
+        border-radius: 10px;
+        background-color: #f2f2f2;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        background-color: #e6e6ff;
+        box-shadow: 0 0 8px rgba(78, 84, 200, 0.4);
+      }
+
+      button {
+        background-color: #4e54c8;
+        color: white;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      button::after {
+        content: "➔";
+        position: absolute;
+        right: -30px;
+        opacity: 0;
+        transition: right 0.3s ease, opacity 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #3b3fa8;
+        padding-right: 40px;
+      }
+
+      button:hover::after {
+        right: 15px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Student Information</h2>
+      <form action="index.html" method="get">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="number" name="age" placeholder="Age" required />
+        <input type="text" name="course" placeholder="Course" required />
+        <input type="text" name="college" placeholder="College Name" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
